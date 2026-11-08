@@ -1,41 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Download MyStore — your neighbourhood kirana store, delivered." />
-  <meta name="theme-color" content="#667eea" />
-  <title>Download MyStore</title>
-  <link rel="icon" type="image/png" href="assets/icon.png" />
-  <link rel="stylesheet" href="css/style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MyStore - Your Neighbourhood Kirana Store</title>
+  <meta name="description" content="Download the MyStore app. Fresh groceries, daily essentials, and live delivery tracking right at your fingertips.">
+  <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/adityasaini404/mystore-releases/main/assets/icon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <!-- Marked.js for rendering Markdown from GitHub Release Notes -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 <body>
-  <div class="card">
-    <div class="logo"><img src="assets/icon.png" alt="MyStore" /></div>
-    <h1>MyStore</h1>
-    <p class="tagline">Your neighbourhood kirana store, delivered.</p>
 
-    <div class="version-badge" id="versionBadge">
-      <span class="dot"></span>
-      Checking latest version…
+  <!-- Animated Background Orbs -->
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">
+      <span class="logo-icon">🛒</span> MyStore
     </div>
-
-    <a class="download-btn" id="downloadBtn" href="#" aria-disabled="true">
-      <span class="spinner" id="btnSpinner"></span>
-      <span id="btnText">Please wait…</span>
+    <a href="https://github.com/adityasaini404/mystore-releases" target="_blank" class="github-btn">
+      View Releases
     </a>
+  </nav>
 
-    <p class="error" id="errorMsg" style="display: none;"></p>
-    <div class="meta" id="meta"></div>
+  <!-- Main Content -->
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <div class="version-badge" id="versionBadge">
+          <span class="pulse-dot"></span> Checking for latest version...
+        </div>
+        <h1>Your Neighbourhood <br><span class="gradient-text">Kirana Store</span></h1>
+        <p>Get fresh groceries, daily essentials, and live order tracking delivered to your doorstep in minutes.</p>
+        
+        <div class="cta-group">
+          <a href="#" id="downloadBtn" class="download-btn disabled" aria-disabled="true">
+            <span class="spinner" id="btnSpinner"></span>
+            <span id="btnText">Please wait...</span>
+          </a>
+          <div class="meta-info" id="metaInfo"></div>
+          <p class="error-text" id="errorMsg" style="display: none;"></p>
+        </div>
+      </div>
+      
+      <!-- App Mockup / Placeholder Image -->
+      <div class="hero-image">
+        <div class="phone-mockup">
+          <div class="notch"></div>
+          <div class="screen-content">
+            <h3 style="text-align: center; margin-top: 40px; color: #333;">MyStore App</h3>
+            <p style="text-align: center; font-size: 12px; color: #666; padding: 0 20px;">Your daily shopping made easy.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <div class="links">
-      <a href="privacy.html">Privacy Policy</a>
-      <span>·</span>
-      <a href="https://github.com/YOUR_USERNAME/mystore-releases" target="_blank">All Releases</a>
-    </div>
-  </div>
+    <!-- Features Section -->
+    <section class="features">
+      <h2>Why choose MyStore?</h2>
+      <div class="grid">
+        <div class="feature-card">
+          <div class="icon">🚚</div>
+          <h3>Lightning Fast Delivery</h3>
+          <p>Get your daily essentials delivered within 30 minutes to your doorstep.</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon">📍</div>
+          <h3>Live Tracking</h3>
+          <p>Track your delivery partner in real-time on the map from our app.</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon">🥦</div>
+          <h3>Farm Fresh Products</h3>
+          <p>We source directly from local vendors to ensure the highest quality.</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon">💸</div>
+          <h3>Best Prices</h3>
+          <p>Enjoy daily deals and discounts that help you save more on every order.</p>
+        </div>
+      </div>
+    </section>
 
-  <script src="js/app.js"></script>
+    <!-- Changelog & Installation -->
+    <section class="info-section">
+      <div class="info-card">
+        <h3>🆕 What's New</h3>
+        <div id="changelog" class="changelog-content">
+          <p>Loading release notes...</p>
+        </div>
+      </div>
+      
+      <div class="info-card">
+        <h3>📱 How to Install</h3>
+        <ol class="install-steps">
+          <li>Click the <b>Download APK</b> button above.</li>
+          <li>Wait for the file to download.</li>
+          <li>Open the downloaded file.</li>
+          <li>If prompted, enable <b>"Install from Unknown Sources"</b> in settings.</li>
+          <li>Click <b>Install</b> and enjoy!</li>
+        </ol>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>Made with ❤️ for our customers.</p>
+    <p style="font-size: 12px; margin-top: 8px; opacity: 0.6;">&copy; 2025 Saini Kirana Store. All rights reserved.</p>
+  </footer>
+
+  <script src="app.js"></script>
 </body>
 </html>
-
